@@ -57,7 +57,7 @@ header, nav, main, footer { /* the comma means apply the following CSS declarati
 }
 /*website name*/header h1 {
     position: relative;
-    font-size: 7vw;/*1.875em;*/
+    font-size: 1.875em;
     text-align: left;
     top: 5px;
     /*border: 1px solid red; to help see block*/
