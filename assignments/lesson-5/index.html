@@ -18,19 +18,38 @@
 </head>
 
 <!--...
+<<<<<<< HEAD
 
 
 ...-->
     
 <body>
 <!-------------------HEADER----------------->
+=======
+    Most of your CSS markup will be in the small CSS file and necessary changes will be made to the medium and large views in a cascading pattern. The latter two will contain media queries based on the following breakpoints. 
+
+    Use this tutorial for creating a horizontal menu bar for the main menu (see the Horizontal Navigation Bar Examples section). The horizontal bar should only be applied to the medium and large views as per the sketches. 
+
+    Town weather pages contain the current weather condition, the day's summary, high temperature, low temperature, chance of precipitation, and wind conditions.  In addition, an 10-day forecast is provided for medium and large views.  As a development specification, do not show the 10-day forecast in the 'small' view. See rough sketch.  
+    Hint: The 10-day forecast containing element's CSS declaration could set the display: none; in the main/default CSS view.
+
+    You will need to fill in the content areas with viable content. With images, it is OK to use free stock photos or your own high quality photos.
+    Note the sizing rules of some the images in the provided CSS files that scale the images depending upon the viewport. Adjust that sizing to meet your design needs as necessary and apply the concept to all the images on the page as needed, such as the logo in the header.
+...-->
+    
+<body>
+
+>>>>>>> 10cad50cd88245fe8984e9d3665f11434ba74b9d
   <header>
     <img src="images/logo-circle-weather.png" alt="The site logo" width="120px">
     <h1>forecast4you.com</h1>
     <div class="subheading">Starting a great day</div>
   </header>
 
+<<<<<<< HEAD
 <!-------------------NAV----------------->
+=======
+>>>>>>> 10cad50cd88245fe8984e9d3665f11434ba74b9d
   <!-- site navigation use placeholder references -->
   <nav>
     <button onclick="toggleNavMenu()">&#9776;</button>
@@ -45,6 +64,7 @@
     </ul>
   </nav>
     
+<<<<<<< HEAD
 
 <!-------------------MAIN(ARTICLE) (SECTION)----------------->
   <main>
@@ -73,10 +93,34 @@
             <p>Wind Speed:<strong>5mpg SW</strong></p>  
           </div>
         
+=======
+  <main>
+    <h2>The City of Franklin</h2>
+    <figure>
+      <img src="images/banner-sun-storm.jpg" alt="sun-storm" width="400">
+    </figure>
+    <section>
+      <h3>Weather Summary</h3>    
+      <div class="highlow">
+        <p>High:<strong>90°F</strong></p>  
+        <p>Low:<strong>66°F</strong></p>  
+      </div>
+      <div class="current">
+        Sunny
+        <picture>
+            <img src="images/020-sun.png" alt="sunnyday-icon" width="100px" height="">
+        </picture>
+      </div>   
+      <div class="conditions">
+        <p>Precipitation:<strong>0%</strong></p>  
+        <p>Wind Speed:<strong>5mpg SW</strong></p>  
+      </div>           
+>>>>>>> 10cad50cd88245fe8984e9d3665f11434ba74b9d
     </section>
         
     <section class="forecast">
       <h3>10 Day Forecast</h3>
+<<<<<<< HEAD
     <!--caption it was originally h3-->
       <table>
 	    <thead><!--header of table-->
@@ -107,20 +151,59 @@
                         <td>89&deg;F</td>
                     </tr>
                     </tbody>
+=======
+      <table>
+	    <thead>
+          <tr>
+            <th>Day 1</th>
+            <th>Day 2</th>
+            <th>Day 3</th>
+            <th>Day 4</th>
+            <th>Day 5</th>
+            <th>Day 6</th>
+            <th>Day 7</th>
+            <th>Day 8</th>
+            <th>Day 9</th>
+            <th>Day 10</th>
+          </tr>
+		</thead>
+        <tbody>  
+          <tr>
+            <td>89&deg;F</td>
+            <td>87&deg;F</td>
+            <td>78&deg;F</td>
+            <td>75&deg;F</td>
+            <td>72&deg;F</td>
+            <td>72&deg;F</td>
+            <td>79&deg;F</td>
+            <td>83&deg;F</td>
+            <td>85&deg;F</td>
+            <td>89&deg;F</td>
+          </tr>
+		</tbody>
+>>>>>>> 10cad50cd88245fe8984e9d3665f11434ba74b9d
       </table>
     </section>
       
     <article>
       <h3>Franklin Breaks Record</h3>	
       <div class="town-article">
+<<<<<<< HEAD
         <img src="images/city-rain400x267.jpg" alt="faros" width="400" height="267">
+=======
+        <img src="images/city-sun-faros.jpeg" alt="faros" width="300px" height="">
+>>>>>>> 10cad50cd88245fe8984e9d3665f11434ba74b9d
         <p>Short article content placeholder. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eros diam, porta quis eros vel, accumsan posuere ante. Sed aliquet, ex eget sollicitudin hendrerit, erat mi scelerisque nisl, ut feugiat dolor justo vel arcu. Phasellus interdum dolor vitae tristique blandit. Proin commodo eleifend augue, porta eleifend libero volutpat a. Donec quis semper ex. Quisque euismod et dolor a fringilla. Quisque venenatis eu velit laoreet congue. Vestibulum viverra commodo orci quis varius.</p>
       </div>
 		</article>		  
   
   </main>
+<<<<<<< HEAD
 
 <!-------------------FOOTER----------------->
+=======
+    
+>>>>>>> 10cad50cd88245fe8984e9d3665f11434ba74b9d
   <footer>
     <aside>
         <p>www.forecast4you.com</p>
