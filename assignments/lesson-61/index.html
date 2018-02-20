@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>franklin-city-weather-site</title>
+  <meta name="author" content="israel-tapia-cit230-byui">
+  <meta name="description" content="page description placeholder">
+    <!-- external style references in the proper cascading order -->
+            <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700" rel="stylesheet">
+    
+            <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,500,700" rel="stylesheet">
+    <!-- OK Google API font reference -->
+    <link href="styles/normalize.css" rel="stylesheet"> <!-- normalize useragent/browser defaults -->
+    <link href="styles/main.css" rel="stylesheet">    <!-- default styles - small/phone views -->
+    <link href="styles/medium.css" rel="stylesheet">  <!-- medium/tablet views -->
+    <link href="styles/large.css" rel="stylesheet">   <!-- large/wide/desktop views --> 
+</head>
+
+    
+<body>
+<!-------------------HEADER----------------->
+
+  <header>
+    <figure></figure>
+      <img src="images/logo-circle-weatherps6.jpg" alt="The site logo">
+    
+    <h1>forecast4you.com</h1>
+    <div class="subheading">Starting a great day</div>
+  </header>
+
+<!-------------------NAV----------------->
+  <!-- site navigation use placeholder references -->
+  <nav> <!--.navigation-->
+    <button onclick="toggleNavMenu()">&#9776;</button>
+    <ul><!--.responsive-->
+    	
+        <li><a href="#">Home</a></li><!--.li-->
+        <li class="active"><a href="#">Franklin</a></li>
+    	<li><a href="#">Greenville</a></li>
+    	<li><a href="#">Springfield</a></li>
+    	<li><a href="#">Storm Center</a></li>
+    	<li><a href="#">Gallery</a></li>
+        <!--<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        The link with class="icon" is used to open and close the topnav on small screens.
+
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>-->
+    </ul>
+  </nav>
+
+<!-------------------MAIN----------------->
+  <main>
+    
+        <figure> <!--add a figure tag around the image, like <figure class="xx">-->
+            <img src="images/franklin-originalmedium9.jpg" alt="sun-storm">
+        </figure>
+        <h2>The City of Franklin</h2><!--why we move this here  down-->
+      
+      <!-------------------MAIN SECTION weather summary----------------->
+    <section class="wsummary">
+        
+      <h3>Weather Summary</h3>  
+          <div class="highlow">
+            <p>High:<strong>90°F</strong></p>  
+            <p>Low:<strong>66°F</strong></p>  
+          </div>
+        
+          <div class="current">
+            <h4>Sunny</h4>
+            <picture>
+                <img src="images/sunny128.png" alt="sunnyday-icon">
+            </picture>
+          </div>
+        
+          <div class="conditions">
+            <p>Precipitation:<strong>0%</strong></p>  
+            <p>Wind Speed:<strong>5mpg SW</strong></p>  
+          </div>
+        
+
+    </section>
+      
+        <!-------------------MAIN SECTION 10 DAY FORECAST----------------->
+    <section class="forecast">
+      <h3>10 Day Forecast</h3>
+
+    <!--caption it was originally h3-->
+    <!------------------------------TABLE--------->  
+    <table>
+	    <thead><!--header of table-->
+            <tr>
+                <th>Day 1</th>
+                <th>Day 2</th>
+                <th>Day 3</th>
+                <th>Day 4</th>
+                <th>Day 5</th>
+                <th>Day 6</th>
+                <th>Day 7</th>
+                <th>Day 8</th>
+                <th>Day 9</th>
+                <th>Day 10</th>
+            </tr>
+		</thead>
+                    <tbody>  
+                    <tr>
+                        <td>89&deg;F</td>
+                        <td>87&deg;F</td>
+                        <td>78&deg;F</td>
+                        <td>75&deg;F</td>
+                        <td>72&deg;F</td>
+                        <td>72&deg;F</td>
+                        <td>79&deg;F</td>
+                        <td>83&deg;F</td>
+                        <td>85&deg;F</td>
+                        <td>89&deg;F</td>
+                    </tr>
+                    </tbody>
+        </table>
+      </section>
+      
+<!-------------------MAIN ARTICLE FRANKLIN BREAKS RECORD----------------->
+    <article>
+      <h3>Franklin Breaks Record</h3>	
+      <div class="town-article">
+        <!--should I <figure></figure>-->
+            <img src="images/umbrella-rain12512.jpg" alt="rainyvitro">
+            <figcaption>Courtesy by John Watson</figcaption>
+        
+        <p class="lightfont">Short article content placeholder. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eros diam, porta quis eros vel, accumsan posuere ante. Sed aliquet, ex eget sollicitudin hendrerit, erat mi scelerisque nisl, ut feugiat dolor justo vel arcu. Phasellus interdum dolor vitae tristique blandit. Proin commodo eleifend augue, porta eleifend libero volutpat a. Donec quis semper ex. Quisque euismod et dolor a fringilla. Quisque venenatis eu velit laoreet congue. Vestibulum viverra commodo orci quis varius.</p>
+        <p class="lightfont">Maecenas eros diam, porta quis eros vel, accumsan posuere ante. Sed aliquet, ex eget sollicitudin hendrerit, erat mi scelerisque nisl, ut feugiat dolor justo vel arcu. Phasellus interdum dolor vitae tristique blandit. Proin commodo eleifend augue, porta eleifend libero volutpat a. Donec quis semper ex. Quisque euismod et dolor a fringilla. Quisque venenatis eu velit laoreet congue. Vestibulum viverra commodo orci quis varius.</p>
+        <p class="lightfont">Phasellus interdum dolor vitae tristique blandit. Proin commodo eleifend augue, porta eleifend libero volutpat a. Donec quis semper ex. Quisque euismod et dolor a fringilla. Quisque venenatis eu velit laoreet congue. Vestibulum viverra commodo orci quis varius. Maecenas eros diam, porta quis eros vel, accumsan posuere ante. Sed aliquet, ex eget sollicitudin hendrerit, erat mi scelerisque nisl, ut feugiat dolor justo vel arcu. </p>
+      </div>
+		</article>		  
+  
+  </main>
+
+<!-------------------FOOTER----------------->
+    
+  <footer>
+    <aside>
+        <p>www.forecast4you.com</p>
+        <p>123 Main St.</p>
+        <p>Franklin , MU 83456</p>
+        <P>(999)888 7777</P>
+        <P>hello@forecast4you.com</P>
+    </aside>
+    <p class="footer-bar">&copy;2018 All Rights Reserved CIT230 by itapia | www.forecast4you.com | <span id="currentdate">BYUI february 2018</span></p>
+  </footer>
+
+    <script src="scripts/hamburger.js"></script>
+    
+    <!--<span id="currentDate">this is span</span>-->
+    
+    <script src="scripts/currentdate.js"></script>
+    
+    <p id="fecha"></p>
+
+    <script>
+    var d = new Date("October 13, 2014 11:13:00");
+    document.getElementById("fecha").innerHTML = d;
+    </script>
+    
+    
+</body>
+</html>
