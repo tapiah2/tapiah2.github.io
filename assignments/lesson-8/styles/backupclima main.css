@@ -1,0 +1,195 @@
+/*
+
+from small view to medium view
+changing/breaking at ~600px	
+@media only screen and (min-width: 37.5em)
+
+
+from medium view to large
+changing/breaking at ~1024px	
+@media only screen and (min-width: 64em)
+
+*/
+
+/*
+.color-primary-0 { color: #356089 }
+.color-primary-1 { color: #A9C1D9 }
+.color-primary-2 { color: #5D83A7 }
+.color-primary-3 { color: #1B456E }
+.color-primary-4 { color: #052748 }
+*/
+
+/* This main css file contains the default rules and is geared toward the small/phone view
+
+------ALWAYS DESIGN FOR MOBILE FIRST------*/
+
+* { box-sizing: border-box;}  /* This wildcard applies to all elements ensuring a box layout model */
+
+/*---------------BODY--------------*/
+body {
+    font-size: 16px;
+    font-family: merriweather, times, serif;
+    padding: 50px;/* Declare the base font-family - from google font api or other */
+    margin: 0;
+}
+
+/*---------------SOME---------------*/
+header, nav, main, footer { /* the comma means apply the following CSS declarations to all of the listed elements */
+  /* Declare the maximum width and other main element rules to limit the stretch on wide views */
+    widows: auto;
+    max-width: 64em;
+    min-width: inherit;
+    margin: auto;
+    padding: 0;
+    
+}
+
+/*---------------HEADER---------------*/
+/*container*/header {
+    width: auto;
+    height: 220px;
+    position: relative;
+    align-self: center;
+    margin: 30px 10px;
+    
+    /*border: 1px solid red; to help see block*/
+    
+}
+/*website name*/header h1 {
+    position: relative;
+    font-size: 1.875em;
+    text-align: left;
+    top: 5px;
+    /*border: 1px solid red; to help see block*/
+}
+/*logo*/header h1 img {
+    position: absolute;
+    text-align: left;
+}
+/*moto*/header .subheading {
+    position: relative;
+    text-align: left;
+}
+
+/*---------------NAVIGATION---------------*/
+nav {
+    padding: 0;
+    font-family: Alegreya Sans;
+    /*border: 1px solid red; to help see block*/
+    
+}
+        nav button {}
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #A9C1D9;
+}
+        nav ul li {
+            display: inline-block;
+            float: left; /*topnav property*/
+}
+        nav ul li a {
+            display: block;
+            color: #052748;
+            text-align: center;
+            padding: 10px 25px;
+            text-decoration: none;
+}
+        nav ul li.active a {
+            background-color: #052748;
+            color: #A9C1D9;
+}
+/*hover cambia de color al activarse, la letra tambien y el fondo*/
+        nav ul li a:hover:not(.active) {
+            background-color: #052748;
+            color: #A9C1D9;
+}
+    /*nav ul li.right {float: right;}
+
+    @media screen and (max-width: 600px){
+    nav ul li.right, 
+    nav ul li {float: none;}*/
+}
+
+/*---------------MAIN---------------*/
+main {}
+        main h2 {
+            text-align: center;
+}
+        main figure {
+            width: 100%;
+            margin: 0;
+}
+        main figure img {
+            width: 100%;
+            height: auto;
+    /*  also can set max-width: 100%; height: auto;*/
+}
+
+/*---------------SECTION---------------*/
+section.wsummary {
+    background-color: yellowgreen;
+    padding: 7px 0; /*center v&h with padding and or text-align: center*/
+    text-align: center;
+}
+.highlow{
+    background-color: aquamarine;
+}
+.current h4 {
+    background-color: darkgray;
+    position: relative;
+    margin: 0;
+
+}
+.current picture {
+    background-color: blueviolet;
+    position: relative;
+    border: 1px solid red;
+}
+.conditions{
+    background-color: cornflowerblue;
+}
+
+section.forecast {
+    background-color: yellow; 
+}
+table th {
+    background-color: coral; 
+}
+        section picture {
+            width: 20%;
+}
+
+
+/*---------------ARTICLE---------------*/
+article {
+    background-color: aqua;
+    padding: 10px;
+}
+    article h3{
+    text-align: center;
+}
+    article p.town-article img {}/* This structure refers to img elements that are the posterity of paragraph elements within article elements */
+    /* fill the page in the small/phone view */
+    article img { /* image child of article, imagen hija de articulo*/
+        max-width: 100%;
+        height: auto;    
+}
+
+
+/*---------------FOOTER---------------*/
+footer {
+    background-color: #5D83A7;
+}
+        footer aside {
+            background-color: bisque;
+            justify-content: center;
+}
+        footer>p {
+            background-color: #A9C1D9;
+            width: auto;
+            padding: 10px;
+            align-items: center;
+} /* This structure refers to p elements that are direct children of the footer element */

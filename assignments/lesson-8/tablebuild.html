@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tablebuild-page</title>
+  <meta name="author" content="israel-tapia-cit230-byui">
+  <meta name="description" content="page description placeholder">
+    <!-- external style references in the proper cascading order -->
+    <!-- OK Google API font reference -->
+    <link href="styles/normalize.css" rel="stylesheet"> <!-- normalize useragent/browser defaults -->
+    <link href="styles/main.css" rel="stylesheet">    <!-- default styles - small/phone views -->
+    <link href="styles/medium.css" rel="stylesheet">  <!-- medium/tablet views -->
+    <link href="styles/large.css" rel="stylesheet">   <!-- large/wide/desktop views -->
+    
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
+    
+
+<!--------------TEMPORAL STYLES?----------------> 
+<style>
+		/*
+        -The font-family is Ubuntu, sans-serif.
+		-Color scheme includes #e7f0ed, #e7ffed (data rows) and #628ca6, #7fb9c2 with white and black.
+		-You may find the first-child and nth:child() pseudo classes helpful in CSS.*/
+
+table {
+   
+        font-family: 'Ubuntu', sans-serif; 
+        border-collapse: collapse;
+        width: 100%;
+        box-shadow: 15px 15px 15px 5px #628ca6;
+}
+thead th {
+        background-color: #628ca6;
+        padding: 20px;
+        font-size: 1.4em;
+
+}
+    
+tfoot td {
+        background-color: #7fb9c2;
+        padding: 20px;
+}
+tbody td {
+        background-color: #e7f0ed;
+        padding: 20px;
+}
+
+tr:nth-child(even) td {
+        background-color: #e7ffed;
+    }
+        
+    
+</style>
+</head>
+
+
+<body>
+    
+<main>
+    
+<table>
+    <thead>
+            <tr><!--fila 1head-->
+            <th colspan="3" style="background-color:#7fb9c2; font-size: 1.7em">ACME Wildwest</th>
+            </tr>
+            <tr><!--fila 2head-->
+            <th style="font-size: 1em; color:white">Period</th>
+            <th style="font-size: 1em; color:white">Sales</th>
+            <th style="font-size: 1em; color:white">Sales Goal</th>
+            </tr>
+    </thead>
+        
+    <tfoot>
+        <tr><!--fila pie-->
+            <td colspan="3">Compiled 02.28.2018 by itapia</td>
+        </tr>      
+    </tfoot>
+
+    <tbody>
+      <tr><!--fila 1-->
+        <td>August</td>
+        <td>$3,590</td>
+        <td>$4,000</td>
+      </tr>
+      <tr><!--fila 2-->
+        <td>September</td>
+        <td>$4,420</td>
+        <td>$5,000</td>
+      </tr>
+      <tr><!--fila 3-->
+        <td>October</td>
+        <td>$4,870</td>
+        <td>$5,000</td>
+      </tr>
+      <tr><!--fila 4-->
+        <td>November</td>
+        <td>$8,610</td>
+        <td style="background-color:#628ca6; color: white">$7,500</td>
+      </tr>
+      <tr><!--fila 5-->
+        <td style="font-style: italic">Black Friday</td>
+        <td colspan="2">$3,200</td>
+      </tr>
+      <tr><!--fila 6-->
+        <td>December</td>
+        <td>$6,820</td>
+        <td>$7,500</td>
+      </tr>
+    </tbody>
+</table>
+    
+    </main>    
+<br>
+<br>
+
+    
+    
+</body>
+</html>

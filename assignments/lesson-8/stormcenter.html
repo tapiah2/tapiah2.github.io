@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>franklin-city-weather-site</title>
+  <meta name="author" content="israel-tapia-cit230-byui">
+  <meta name="description" content="page description placeholder">
+    <!-- external style references in the proper cascading order -->
+            <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700" rel="stylesheet">
+    
+            <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,500,700" rel="stylesheet">
+    <!-- OK Google API font reference -->
+    <link href="styles/normalize.css" rel="stylesheet"> <!-- normalize useragent/browser defaults -->
+    <link href="styles/main.css" rel="stylesheet">    <!-- default styles - small/phone views -->
+    <link href="styles/medium.css" rel="stylesheet">  <!-- medium/tablet views -->
+    <link href="styles/large.css" rel="stylesheet">   <!-- large/wide/desktop views --> 
+</head>
+
+    
+<body>
+<!-------------HEADER es logo y mas------------>
+
+  <header>
+    <figure></figure>
+      <img src="images/logo-circle-weatherps6.jpg" alt="The site logo">
+    
+    <h1>forecast4you.com</h1>
+    <div class="subheading">Starting a great day</div>
+  </header>
+
+<!-------------NAV es barra de navegación------------->
+  <!-- site navigation use placeholder references -->
+  <nav> <!--.navigation-->
+    <button onclick="toggleNavMenu()">&#9776;</button>
+    <ul><!--.responsive-->
+    	
+        <li><a href="#">Home</a></li><!--.li-->
+        <li class="active"><a href="#">Franklin</a></li>
+    	<li><a href="#">Greenville</a></li>
+    	<li><a href="#">Springfield</a></li>
+    	<li><a href="stormcenter.html">Storm Center</a></li>
+        
+        
+<!----------xx------>
+    	<li><a href="gallery.html">Gallery</a></li>
+        <!--<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        The link with class="icon" is used to open and close the topnav on small screens.
+
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>-->
+    </ul>
+  </nav>
+
+<!-------------MAIN empieza con la imagen banner-----
+
+
+	full name using input of type text and is required and only accept alpha characters with a minimum of five characters using a regular expression pattern.
+
+	▪ email using input of type email and use a placeholder to provide a demo email
+
+	▪ phone number using input of type tel and is required
+
+	▪ zip code using input of type number and is required
+
+	▪ storm date using input of type date 
+
+	▪ storm type using input with a list attribute using a datalist of suggestions including "Flash Flood", "Hail", "Hurricane", "Thunderstorm", and "Tornado".
+
+	▪ storm severity using type range (1 to 10) with a corresponding label that indicates the current range value from 1 to 10. Hint: See the Pen HTML Form Example Objects
+
+	▪ storm region using select with dropdown options of "Franklin", Greenville, and "Springfield". Add a first option with the text "Select Region ..." that is shown by default but not selectable (disabled). The rest of the options should have relevant value attributes.
+
+	▪ user in-danger level using input of type radio with options and values of of yes, maybe, and no.
+
+	▪ additional information or comments using a textarea 
+
+	▪ form submission button using input of type submit
+
+Each field appropriate name attribute
+
+Ensure that the design meets standards such as eye tracking in a straight line and proper keyboard progression for accessibility.
+
+See "Designing more Efficient Forms"
+
+Your form design SHOULD NOT be exactly like the tutorial given on building a form. Incorporate your own design ideas and patterns.
+
+------->
+    <br>
+    <br>
+    <br>
+  <main>
+      
+    <form>
+        full name using input of type text and is required and only accept alpha characters with a minimum of five characters using a regular expression pattern.
+        Name <input name="fullname" type="text">
+        <br>
+        Birthday: <input type="date" name="bday">
+        <br>
+        Submit <input type="submit">
+        <br>
+        E-mail: <input type="email" name="email">
+        <br>
+        Telephone: <input type="tel" name="usrtel">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+     
+        
+        
+        
+        
+        
+      
+      
+    </form>
+
+      
+  
+  </main><!----CIERRA MAIN---->
+
+<!---------------FOOTER zona azul baja---------------->
+    
+  <footer>
+    <aside>
+        <p>www.forecast4you.com</p>
+        <p>123 Main St.</p>
+        <p>Franklin , MU 83456</p>
+        <P>(999)888 7777</P>
+        <P>hello@forecast4you.com</P>
+    </aside>
+    <p class="footer-bar">&copy;2018 All Rights Reserved CIT230 by itapia | www.forecast4you.com | <span id="currentdate">BYUI february 2018</span></p>
+  </footer>
+
+    <script src="scripts/hamburger.js"></script>
+    
+    <!--<span id="currentDate">this is span</span>-->
+    
+    <script src="scripts/currentdate.js"></script>
+    
+    <p id="fecha"></p>
+
+    <script>
+    var d = new Date("October 13, 2014 11:13:00");
+    document.getElementById("fecha").innerHTML = d;
+    </script>
+    
+    
+</body>
+</html>
