@@ -14,7 +14,72 @@
     <link href="styles/normalize.css" rel="stylesheet"> <!-- normalize useragent/browser defaults -->
     <link href="styles/main.css" rel="stylesheet">    <!-- default styles - small/phone views -->
     <link href="styles/medium.css" rel="stylesheet">  <!-- medium/tablet views -->
-    <link href="styles/large.css" rel="stylesheet">   <!-- large/wide/desktop views --> 
+    <link href="styles/large.css" rel="stylesheet">   <!-- large/wide/desktop views -->
+    
+<!---------Style Form-->
+<style>
+    /*
+.color-primary-0 { color: #356089 }
+.color-primary-1 { color: #A9C1D9 }
+.color-primary-2 { color: #5D83A7 }
+.color-primary-3 { color: #1B456E }
+.color-primary-4 { color: #052748 }
+*/
+    
+    * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+    form#storminfo{
+        margin: 50px auto;
+    }
+    fieldset {
+        background-color: #A9C1D9;
+        margin: 1.5em 0;
+        border: 1px solid #A9C1D9;
+        box-shadow: 4px 4px 10px #666;
+    }
+    legend{
+        /*color: #fff;
+        margin-left: 6%;
+        padding: .5em;
+        background-color: #356089;
+        box-shadow: 4px 4px 10px #666;*/
+    background: #356089;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 200;
+    padding: 20px;
+    margin: -30px -30px 30px -14px;
+    box-shadow: 4px 4px 10px #666;
+    }
+    label{
+        display: block;
+        margin: .5em;
+ 
+    }
+    label span {
+        display: block;
+        font-size: 1.3em;
+        color: #052748;
+        padding-top: .2em;
+        padding-bottom: .2em;
+  
+    }
+    input.boton {
+        /*-webkit-appearance: none; remove the apple mobile default styling*/
+        color: #fff;
+        border: 1px solid #356089;
+        width: 50%;
+        margin: .5em 0;
+        padding: 1em;
+        background: #356089;
+        box-shadow: 4px 4px 10px #666;
+        text-transform: uppercase;
+    }
+    
+</style>
 </head>
 
     
@@ -50,79 +115,70 @@
         <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>-->
     </ul>
   </nav>
-
-<!-------------MAIN empieza con la imagen banner-----
-
-
-	full name using input of type text and is required and only accept alpha characters with a minimum of five characters using a regular expression pattern.
-
-	▪ email using input of type email and use a placeholder to provide a demo email
-
-	▪ phone number using input of type tel and is required
-
-	▪ zip code using input of type number and is required
-
-	▪ storm date using input of type date 
-
-	▪ storm type using input with a list attribute using a datalist of suggestions including "Flash Flood", "Hail", "Hurricane", "Thunderstorm", and "Tornado".
-
-	▪ storm severity using type range (1 to 10) with a corresponding label that indicates the current range value from 1 to 10. Hint: See the Pen HTML Form Example Objects
-
-	▪ storm region using select with dropdown options of "Franklin", Greenville, and "Springfield". Add a first option with the text "Select Region ..." that is shown by default but not selectable (disabled). The rest of the options should have relevant value attributes.
-
-	▪ user in-danger level using input of type radio with options and values of of yes, maybe, and no.
-
-	▪ additional information or comments using a textarea 
-
-	▪ form submission button using input of type submit
-
-Each field appropriate name attribute
-
-Ensure that the design meets standards such as eye tracking in a straight line and proper keyboard progression for accessibility.
-
-See "Designing more Efficient Forms"
-
-Your form design SHOULD NOT be exactly like the tutorial given on building a form. Incorporate your own design ideas and patterns.
-
-------->
     <br>
     <br>
     <br>
-  <main>
+<main>
       
-    <form>
-        full name using input of type text and is required and only accept alpha characters with a minimum of five characters using a regular expression pattern.
-        Name <input name="fullname" type="text">
+<form action="" method ="post" enctype="multipart/form-data" name= "report" id="storminfo">
+	<!--full name using input of type text and is required and only accept alpha characters with a minimum of five characters using a regular expression pattern.-->
+    <fieldset>
+        <legend><span>Personal Information</span></legend>
+        <label><span>Full Name</span> <input name="fullname" type="text" value="" placeholder="Full Name" pattern="[a-zA-Z-._]{3,99}" required></label>
+        <!--email using input of type email and use a placeholder to provide a demo email-->
+        <label><span>E-mail:</span> <input name="mail" type="email" value="" placeholder="contact@gmail.com" required></label>  
+        <!--phone number using input of type tel and is required-->
+        <label><span>Phone:</span> <input name="phone" type="tel" value="" placeholder="1234567890" pattern="[0-9]{10,20}" required></label><!--zip code using input of type number and is required-->
+        <label><span>ZipCode:</span> <input name="zipcode" type="text" value="" placeholder="88855" pattern="[0-99999]" required></label>
+    </fieldset> 
         <br>
-        Birthday: <input type="date" name="bday">
-        <br>
-        Submit <input type="submit">
-        <br>
-        E-mail: <input type="email" name="email">
-        <br>
-        Telephone: <input type="tel" name="usrtel">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        
-     
-        
-        
-        
-        
-        
-      
-      
-    </form>
+    <fieldset>
+        <legend><span>Storm Information</span> </legend>
+<!--storm date using input of type date-->
+        <label><span>Storm Date:</span> <input name="date" type="date" value="" placeholder="date" required></label><!--storm type using input with a list attribute using a datalist of suggestions including "Flash Flood", "Hail", "Hurricane", "Thunderstorm", and "Tornado".-->
+        <label>
+            <span>Type of Storm:</span>
+            <input name="stormtype" list="stormtype">
+            <datalist id="stormtype">
+                    <option value="Flash Flood">
+                    <option value="Hail">
+                    <option value="Hurricane">
+                    <option value="Thunderstorm">
+                    <option value="Tornado">
+            </datalist>
+        </label>
+        <!--storm severity using type range (1 to 10) with a corresponding label that indicates the current range value from 1 to 10. Hint: See the Pen HTML Form Example Objects-->
+        <label><span>Storm Severity Range (from 1 to 10)</span> <input name="stormseverity" type="range"  min="1" max="10"></label>
+        <!--storm region using select with dropdown options of "Franklin", Greenville, and "Springfield". Add a first option with the text "Select Region ..." that is shown by default but not selectable (disabled). The rest of the options should have relevant value attributes.-->
+        <label>
+            <select>
+                <option value="region">Select Region</option>
+                <option value="franklin">Franklin</option>
+                <option value="green">Greenville</option>
+                <option value="spring">Springfield</option>
+            </select>
+        </label>
+        <!--The <select> element is used to create a drop-down list.
+        The <option> tags inside the <select> element define the available options in the list.->
+        <!--user in-danger level using input of type radio with options and values of of yes, maybe, and no.-->
+        <label><span>User in-danger?</span> <input type="radio" name="danger-level" value="male" checked> yes
+        <input type="radio" name="danger-level" value="female"> maybe
+        <input type="radio" name="danger-level" value="other"> no
+        </label>
+	<!--additional information or comments using a textarea-->
+        <label><span>Aditional Information</span>
+            <textarea rows="8" cols="70">
+            </textarea>
+        </label>
+    </fieldset>
+    <!--form submission button using input of type submit-->
+    <input type="submit" value="Sign Up" class="boton">
+    <input type="hidden" value="Storm Report" name="subject">
+    <input name="redirect" type="hidden" value="thanks.html">
 
+</form>
       
-  
-  </main><!----CIERRA MAIN---->
+</main><!----CIERRA MAIN---->
 
 <!---------------FOOTER zona azul baja---------------->
     
