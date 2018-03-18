@@ -1,0 +1,138 @@
+<!--------gallery.html page--------->
+
+<!----Use CSS Grid so that the large view displays three columns, the medium, two columns, and the small view only one column.
+
+***This page must utilize the CSS Grid display property for the main content area which contains the images and descriptions. 
+
+Incorporate the ***CSS box-shadow property when a user hovers over the images in the gallery and apply the shadow to the image and corresponding descriptive text in the large view only. 
+Hint: See the Pen Image Effects on CodePen. 
+
+OK Your site navigation on both pages should link back and forth between the Franklin and Gallery pages.-->
+
+<!doctype html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gallery-franklin-page</title>
+  <meta name="author" content="israel-tapia-cit230-byui">
+  <meta name="description" content="page description placeholder">
+    <!-- external style references in the proper cascading order -->
+            <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700" rel="stylesheet">
+    
+            <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,500,700" rel="stylesheet">
+    <!-- OK Google API font reference -->
+    <link href="styles/normalize.css" rel="stylesheet"> <!-- normalize useragent/browser defaults -->
+    <link href="styles/main.css" rel="stylesheet">    <!-- default styles - small/phone views -->
+    <link href="styles/medium.css" rel="stylesheet">  <!-- medium/tablet views -->
+    <link href="styles/large.css" rel="stylesheet">   <!-- large/wide/desktop views --> 
+
+<!--------------TEMPORAL STYLES?----------------> 
+    <style></style>
+</head>
+    
+    
+<body>    
+<!-------------HEADER es logo y mas------------>
+    <header>
+    <figure></figure>
+      <img src="images/logo-circle-weatherps6.jpg" alt="The site logo">
+    
+    <h1>forecast4you.com</h1>
+    <div class="subheading">Starting a great day</div>
+  </header>
+
+<!------------NAV barra de navegación--------------->
+  <!-- site navigation use placeholder references -->
+<nav id="myTopnav">
+    <a href="home.html" class="active">Home</a>
+    <a href="index.html">Franklin</a>
+    <a href="greenville.html">Greenville</a>
+    <a href="springfield.html">Springfield</a>
+    <a href="stormcenter.html">Storm Center</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</nav>
+
+<!------------MAIN CONTENT AREA---------------
+***This page must utilize the CSS Grid display property for the main content area which contains the images and descriptions.-->
+<div class="container">
+    <div class="gallery">
+        <a target="_blank" href="images/hot12.jpg">
+            <img src="images/hot12.jpg" alt="hotweathercity">
+        </a>
+        <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac viverra dolor. Proin consectetur sem ligula, eu faucibus mi elementum vitae.</div>
+        </div>
+    
+    <div class="gallery">
+        <a target="_blank" href="images/rainy12.jpg">
+            <img src="images/rainy12.jpg" alt="rainyday">
+        </a>
+        <div class="desc">Morbi commodo turpis ut felis feugiat, nec varius nibh viverra. Pellentesque tincidunt dignissim arcu. Praesent placerat lacus sem.</div>
+        </div>
+    
+    <div class="gallery">
+        <a target="_blank" href="images/snow12.jpg">
+            <img src="images/snow12.jpg" alt="snowy">
+        </a>
+        <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac viverra dolor. Proin consectetur sem ligula, eu faucibus mi elementum vitae.</div>
+    </div>
+    
+    <div class="gallery">
+        <a target="_blank" href="images/hurricane12.jpg">
+            <img src="images/hurricane12.jpg" alt="hurrac1">
+        </a>
+        <div class="desc">Morbi commodo turpis ut felis feugiat, nec varius nibh viverra. Pellentesque tincidunt dignissim arcu. Praesent placerat lacus sem.</div>
+    </div>
+    
+    <div class="gallery">
+        <a target="_blank" href="images/hurracaine12.jpg">
+            <img src="images/hurracaine12.jpg"alt="hurraca2">
+        </a>
+        <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac viverra dolor. Proin consectetur sem ligula, eu faucibus mi elementum vitae.</div>
+    </div>
+    
+    <div class="gallery">
+        <a target="_blank" href="images/storm12.jpg">
+            <img src="images/storm12.jpg" alt="stormy">
+        </a>
+        <div class="desc">Morbi commodo turpis ut felis feugiat, nec varius nibh viverra. Pellentesque tincidunt dignissim arcu. Praesent placerat lacus sem.</div>
+    </div> 
+    
+</div>
+    
+<!----------FOOTER--------->    
+<footer>
+    <aside>
+        <p>www.forecast4you.com</p>
+        <p>123 Main St.</p>
+        <p>Franklin , MU 83456</p>
+        <P>(999)888 7777</P>
+        <P>hello@forecast4you.com</P>
+    </aside>
+    <p class="footer-bar">&copy;2018 All Rights Reserved CIT230 by itapia | www.forecast4you.com | <span id="currentdate">BYUI february 2018</span></p>
+  </footer>
+<!--script src="scripts/hamburger.js"></script-->
+    <!--<span id="currentDate">this is span</span>-->
+    <script src="scripts/currentdate.js"></script>
+    
+    <p id="fecha"></p>
+
+<script> //función de la barra de navegación
+    function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "nav") {
+        x.className += " responsive";
+    } else {
+        x.className = "nav";
+    }
+}
+</script>
+    
+</body>
+    <script>
+        var d = new Date("October 13, 2014 11:13:00");
+        document.getElementById("fecha").innerHTML = d; 
+        
+    </script>
+</html>

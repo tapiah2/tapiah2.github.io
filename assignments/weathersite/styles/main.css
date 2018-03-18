@@ -1,0 +1,378 @@
+/*
+
+from small view to medium view
+changing/breaking at ~600px	
+@media only screen and (min-width: 37.5em)
+
+
+from medium view to large
+changing/breaking at ~1024px	
+@media only screen and (min-width: 64em)
+
+*/
+
+/*
+.color-primary-0 { color: #356089 }
+.color-primary-1 { color: #A9C1D9 }
+.color-primary-2 { color: #5D83A7 }
+.color-primary-3 { color: #1B456E }
+.color-primary-4 { color: #052748 }
+*/
+
+/* This main css file contains the default rules and is geared toward the small/phone view
+
+------ALWAYS DESIGN FOR MOBILE FIRST------*/
+
+* { box-sizing: border-box;}  /* This wildcard applies to all elements ensuring a box layout model */
+
+/*---------------BODY--------------*/
+body {
+    font-size: 16px;
+    font-family: 'Alegreya Sans', sans-serif;
+    padding: 50px;/* Declare the base font-family - from google font api or other */
+    margin: 0;
+}
+p {
+    font-size: 1.2em;
+}
+
+/*---------------SOME---------------*/
+header, nav, main, footer, container { /* the comma means apply the following CSS declarations to all of the listed elements */
+  /* Declare the maximum width and other main element rules to limit the stretch on wide views
+    
+    +++64em is also 1028px (if basefont is 16px)
+    @media only screen and (min-width: 64rem)*/
+    widows: auto;
+    max-width: 64em;
+    margin: auto;
+    padding: 0;
+    
+}
+
+/*---------------HEADER---------------*/
+/*container*/header {
+    width: auto;
+    height: 185px;
+    position: relative;
+    align-self: center;
+    padding: 0px 10px 0px 10px;
+    
+    /*border: 1px solid red; to help see block*/
+    
+}
+/***_________check header position elements______________*/
+/*website name forecast4you.com*/header h1 {
+    position: relative;
+    float: inherit;
+    font-size: 2.3em;/*7vw;*/
+    text-align: left;
+    margin: 0;
+
+    /*border: 1px solid red; to help see block*/
+}
+/*logo*/header h1 img {
+    position: absolute;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+}
+/*moto starting a great day*/header .subheading {
+    position: relative;
+    float: inherit;
+    text-align: left;
+    margin: 0;
+}
+
+/*
+.color-primary-0 { color: #356089 }
+.color-primary-1 { color: #A9C1D9 }
+.color-primary-2 { color: #5D83A7 }
+.color-primary-3 { color: #1B456E }
+.color-primary-4 { color: #052748 }
+*/
+
+
+
+
+/*---------------NAVIGATION---------------
+Responsive Topnav Example*/
+ /* Add a black background color to the top navigation */
+nav {
+  overflow: hidden;
+  background-color: #052748;
+    max-width: 1024px;
+    margin: auto;
+}
+
+nav a {
+  float: left;
+  display: block;
+  color: #A9C1D9;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+nav a:hover {
+  background-color: #A9C1D9;
+  color: #052748;
+}
+
+.active {
+  background-color: #1B456E;
+  color: #A9C1D9;
+}
+
+nav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  nav a:not(:first-child) {display: none;}
+  nav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav.responsive {position: relative;}
+  nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+
+
+
+
+
+
+
+
+/*---------------MAIN---------------*/
+main {
+    padding: 0;
+    /*??min-height: 10rem;*/
+
+}
+        main h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin: 20px 0px 10px 0px
+}
+        main figure {
+            width: 100%;
+            margin: 0;
+            
+}
+        main figure img {
+            max-width: 100%;
+            height: auto;
+            
+}
+
+/*---------------SECTION from MAIN Weather Summary---------------*/
+section.wsummary {
+    position: relative;/*center v&h with padding and or text-align: center*/
+    text-align: center;
+    font-size: 1.4rem;
+    width: 100%;
+    height: 250px
+}
+.highlow{   position: absolute;
+            padding: 20px;
+            top: 20%;
+            right: 40%;
+}
+.current h4 { position: absolute;
+            padding: 20px;
+            top: 20%;
+            right: 60%;
+            font-size: 2rem;
+}
+.current picture {
+            position: absolute;
+            padding: 20px;
+            top: 20%;
+            right: 78%;
+}
+.conditions{ position: absolute;
+            padding: 20px;
+            top: 20%;
+            right: 0;
+}
+
+
+section.forecast { background-color: #A9C1D9; padding: 15px;
+}
+section.forecast h3 { text-align: center; margin: 0;
+    padding: 10px 10px; font-size: 1.8rem;
+}
+
+/*----------------TABLE-------------*/
+table{
+    border-collapse: collapse;
+    width: 100%;
+    overflow-y: auto;
+    font-size: 1.5rem;
+    text-align: center;
+}
+table th {
+    border: 4px solid #A9C1D9;
+    height: 40px;
+    background-color: gold;
+}
+table td {
+    border: 4px solid #A9C1D9;
+    height: 40px;
+    font-size: 1.5rem;
+    background-color: white;
+}
+        section picture {
+            width: 20%;
+}
+
+
+/*---------------ARTICLE---------------*/
+article {
+
+    padding: 0;
+    
+}
+    article h3{
+    text-align: center;
+    font-size: 2em;
+    margin: auto;
+    padding: 25px 0px 0px;
+}
+    article p.town-article img {
+        display: flex;
+        
+}/* This structure refers to img elements that are the posterity of paragraph elements within article elements */
+    /* fill the page in the small/phone view */
+    article img { /* image child of article*/
+        max-width: 100%;
+        float: left;
+        padding: 0px 10px 0px 10px;
+        height: auto;
+        margin: 0;
+}
+    p.lightfont {
+    line-height: 1.6;
+    padding: 0px 25px;
+
+
+}
+
+/*---------------FOOTER---------------*/
+footer {
+    background-color: #5D83A7;
+}
+        footer aside {
+            background-color: #052748;
+            justify-content: center;
+            padding: 15px;
+            text-align: center;
+            line-height: 0.2;
+            color: white;
+            font-size: 1rem;
+}
+        footer>p {
+            background-color: #A9C1D9;
+            width: auto;
+            padding: 15px;
+            margin: 0;
+            text-align: center;
+            color: black;
+            font-size: 1rem;
+} /* This structure refers to p elements that are direct children of the footer element */
+#fecha {
+
+    text-align: center;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: .8rem;
+    margin: 5px;
+
+}
+
+/*----------------Notes Images WRS-----------------*/
+/*----------------
+Scaling vs changing and scaling images
+multiple images
+dificult
+saves data
+increase speed
+
+Standard Image
+in order to make an image responsive:
+    put inseide something else
+    <figure>
+    <img src="images/gardenTomb.jpg">
+    <figcaption>The Garden Tomb</figcaption>
+
+
+
+    </figure>
+
+empty cache and hard  reload
+
+-----------------*/
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap:  20px;
+    justify-content: space-evenly;
+    padding: 20px;
+    max-width: 1024px;
+    background-color: #A9C1D9;
+    padding: 10;
+    margin: auto;
+}
+
+@media screen and (max-width: 600px)/*or 37.5em*/{
+        .container, .gallery {
+            float: none;
+            display: block;/*texto en block resposive*/
+            text-align: left;}
+}
+@media screen and (min-width: 600px, max-width: 1000px)/*or 37.5em*/{
+        .container, .gallery {
+            grid-template-columns: 1fr 1fr !important;
+            float: none;
+            display: grid;/*texto en block resposive*/
+            text-align: left;}
+}
+
+    div.gallery {
+        margin: 0px;
+        /*float: left;*/
+        max-width: 320px;
+        background-color: white;
+
+    }
+
+    div.gallery:hover {
+        border: 1px solid #777;
+    }
+
+    div.gallery img {
+        width: 100%;
+        height: auto;
+
+    }
+
+    div.desc {
+        padding: 15px;
+        text-align: center;
+        font-size: 1.5rem;
+    }
