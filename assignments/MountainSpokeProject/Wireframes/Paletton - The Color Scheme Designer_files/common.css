@@ -1,0 +1,13 @@
+.ui-tooltip {
+	padding: 2px 8px;
+	font-size: 14px;
+	text-align: center;
+	}
+.ui-tooltip p {
+	margin: 0;
+	}
+.ui-tooltip p.info {
+	margin: 2px 0 0 0;
+	font-size: 9px;
+	opacity: 0.75;
+	}

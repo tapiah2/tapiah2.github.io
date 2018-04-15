@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventpage</title>
+  <meta name="author" content="israel-tapia-cit230-byui">
+  <meta name="description" content="page description placeholder">
+    <!-- external style references in the proper cascading order -->
+            <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700" rel="stylesheet">
+    
+            <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,500,700" rel="stylesheet">
+    <!-- OK Google API font reference -->
+    <link href="styles/normalize.css" rel="stylesheet"> <!-- normalize useragent/browser defaults -->
+    <link href="styles/main.css" rel="stylesheet">    <!-- default styles - small/phone views -->
+    <link href="styles/medium.css" rel="stylesheet">  <!-- medium/tablet views -->
+    <link href="styles/large.css" rel="stylesheet">   <!-- large/wide/desktop views -->
+
+</head>
+
+    
+<body>
+<!-------------HEADER------------>
+
+<header>
+    <img src="imagesterm/mountain-logo300.jpg" alt="mountainspoke-logo">
+    <!--div class="subheading">Bezona Montana Biking Group</div-->
+    <h2>Bikes Parts Repair Tours</h2>
+</header>
+
+<!-------------NAV es barra de navegación------------->
+<nav id="myTopnav">
+    <a href="index.html">Home</a>
+    <a href="adventurepage.html">Adventures</a>
+    <a href="eventpage.html">Events</a>
+    <a href="salespage.html">Sales</a>
+    <a href="servicepage.html">Services</a>
+    <a href="contactpage.html">Contact Us</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</nav>
+
+<main>
+
+        <img src="imagesterm/eventdivide1024600.jpg" alt="divideannual-event">
+    
+        <h2>Cycle the Continental Divide</h2>
+    
+        <p>The Cycle Continental Divide Annual Event is an annual mountain biking tour traversing the length of the Rocky Mountains, from Canada to the Mexican border. Following the 2,745-mile (4,418 km) Great Divide Mountain Bike Route, the event has a very low profile, and is entirely amateur. There are no entry fees, no sponsorship, and no prizes. Challenges along the route include mountains, great distances between resupply towns, risk of mechanical failure or injury, bears, poor weather, snowfall, and significant unrideable sections that require pushing the bike. Riders usually adopt a "bikepacking" style, carrying minimal equipment sufficient for camping or bivouacking, and only enough food and water to last until the next town. In this way, riders ride huge distances each day.</p>
+
+        <p>The Tour Divide usually starts on the second Friday in June - at an event called Grand Départ. The race can also be completed at any time as an individual time trial (ITT). Due to the extreme distances, inaccessibility of the route, lack of television coverage and small number of participants, spectating is impractical. However, many riders carry SPOT tracker tracking devices, allowing their progress to be continuously monitored on websites.</p>
+    
+    
+
+<table class="annual">
+            <thead>
+                    <tr><!--fila 1head-->
+                    <th colspan="3" style="background-color:#FFD398 ; font-size: 1.4em">Routes and Dates 2018</th>
+                    </tr>
+                    <tr><!--fila 2head-->
+                    <th style="font-size: 1em; color:white">Date</th>
+                    <th style="font-size: 1em; color:white">Basic Requirements</th>
+                    <th style="font-size: 1em; color:white">Cost</th>
+                    </tr>
+            </thead>
+
+            <tfoot>
+                <tr><!--fila pie-->
+                    <td colspan="3">
+                        <a href="http://www.bikepacking.com/event/tour-divide-2018/">More information here</a></td>
+                </tr>      
+            </tfoot>
+
+            <tbody>
+              <tr><!--fila 1-->
+                <td>may 15, 2018</td>
+                <td>
+                  <p class="tableroute">Professional</p>
+                    <p class="tableroute">Cross-country Mountain Bike,
+                    Hardtail or Full Suspension,
+                    Minimum Wheel Size 27.5in (650b),
+                    Proper Dress for Mountain Biking,
+                    Mountain Bke Helmet,
+                    Hydration Backpack,
+                    Mountain Bike Repair Kit.</p></td>
+                <td>$1,289</td>
+              </tr>
+              <tr><!--fila 2-->
+                <td>jun 8, 2018</td>
+                <td>
+                    <p class="tableroute">Amateurs</p>
+                    <p class="tableroute">Cross-country Mountain Bike,
+                    Hardtail or Full Suspension,
+                    Minimum Wheel Size 27.5in (650b),
+                    Proper Dress for Mountain Biking,
+                    Mountain Bke Helmet,
+                    Hydration Backpack,
+                    Mountain Bike Repair Kit.</p></td>
+                <td>$2,390</td>
+              </tr>
+            </tbody>
+</table>
+    
+
+    
+    
+    
+    
+    
+
+<form action="" method ="post" enctype="multipart/form-data" name= "registrant's-information" id="registrant's-information">
+    <fieldset>
+        <legend><span>Registrant's Information</span></legend>
+        <label><span>Full Name</span>
+        <input name="fullname" type="text" value="" placeholder="Lastname, Name" pattern="[a-zA-Z-._]{3,99}" required></label>
+        <!--email using input of type email and use a placeholder to provide a demo email-->
+        <label><span>E-mail:</span> <input name="mail" type="email" value="" placeholder="myemail@mycompany.com" required></label>  
+        <!--phone number using input of type tel and is required-->
+        <label><span>Phone:</span> <input name="phone" type="tel" value="" placeholder="111 555 0000" pattern="[0-9]{10,20}" required></label><!--zip code using input of type number and is required-->
+        <label><span>Date of Birth:</span> <input name="date" type="date" value="" placeholder="date" required></label>
+        <label><span>Home State or Country:</span> <input name="zipcode" type="text" value="" placeholder="State, Country" pattern="[0-99999]" required></label>
+        <label><span>Special Accommodations/Comments</span>
+        <textarea rows="10" cols=""></textarea>
+        </label>
+        
+        <input type="submit" value="Sign Up" class="boton">
+        <input type="hidden" value="Storm Report" name="subject">
+        <input name="redirect" type="hidden" value="thanks.html">
+    </fieldset>
+    
+</form>
+
+<div class="anualgallery">
+    <img src="imagesterm/Annual-bike1.jpg" alt="annualbike-photo">    
+    <img src="imagesterm/annual-bike2.jpg" alt="annualbike-photo">    
+    <img src="imagesterm/annual-bike3.jpg" alt="annualbike-photo">    
+    <img src="imagesterm/Annual-bike4.jpg" alt="annualbike-photo">    
+</div>
+    
+    
+    
+    
+    
+    
+    
+</main>
+
+<!---------------FOOTER zona azul baja---------------->
+    
+  <footer>
+        <p>3950 Valley Commons Drive Bozeman, MT</p>
+        <p>(999)999 8888</p>
+        <p>hello@mountainspoke.com</p>
+        <p class="footer-bar">&copy;2018 All Rights Reserved by itapia | www.mountainspoke.com | <span id="currentdate">BYUI 2018</span></p>
+  </footer>
+
+    <!--script src="scripts/hamburger.js"></script-->
+    <!--<span id="currentDate">this is span</span>-->
+    <script src="scripts/currentdate.js"></script>
+    
+
+
+<script> //función de la barra de navegación
+    function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "nav") {
+        x.className += " responsive";
+    } else {
+        x.className = "nav";
+    }
+}
+</script>
+    
+</body>
+    <script></script>
+</html>

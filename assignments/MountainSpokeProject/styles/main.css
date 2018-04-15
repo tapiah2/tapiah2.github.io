@@ -1,0 +1,523 @@
+/*
+
+from small view to medium view
+changing/breaking at ~600px	
+@media only screen and (min-width: 37.5em)
+
+
+from medium view to large
+changing/breaking at ~1024px	
+@media only screen and (min-width: 64em)
+
+*/
+
+/*
+/* As hex codes */
+
+.color-primary-1 { color: #EB8702 }
+.color-secondary-1-1 { color: #EBB002 }
+.color-secondary-2-1 { color: #EB4402 }
+/* As hex codes CLARITOS */
+.color-primary-0 { color: #FFD398 }	/* Main Primary color */
+.color-secondary-1-0 { color: #FFE598 }	/* Main Secon color (1) */
+.color-secondary-2-0 { color: #FFB698 }	/* Main Secondary color (2) */
+------ALWAYS DESIGN FOR MOBILE FIRST------*/
+
+/* As hex codes */
+
+.color-primary-0 { color: #FFEED7 }	/* Main Primary color */
+.color-secondary-1-0 { color: #FFF5D7 }	/* Main Second color (1) */
+.color-secondary-2-0 { color: #FFE3D7 }	/* Main Secondary color (2) */
+______
+
+
+* { box-sizing: border-box;}  /* This wildcard applies to all elements ensuring a box layout model */
+
+/*---------------BODY--------------*/
+body {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 50px;
+    margin: 0;
+}
+p {
+    font-size: 1.2em;
+    line-height: 1.3em;
+}
+
+h4 {
+    font-family: 'Roboto Slab', serif;
+}
+
+
+header, nav, main, footer, container { /* the comma means apply the following CSS declarations to all of the listed elements */
+  /* Declare the maximum width and other main element rules to limit the stretch on wide views
+    
+    +++64em is also 1028px (if basefont is 16px)
+    @media only screen and (min-width: 64rem)*/
+    widows: auto;
+    max-width: 64em;
+    margin: auto;
+    padding: 0;
+}
+
+/*---------------HEADER---------------*/
+header {
+    /*border: 5px dashed red;*/
+    /*font-family: 'Roboto Slab', serif;*/
+    width: auto;
+    height: 200px;
+   /* position: relative;*/
+   /* align-self: center;*/
+   /* padding: 0px;*/
+    color: #EBB002;
+    /*flexbox?*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*logo*/header img {
+    width: auto;
+}
+/*---------------NAVIGATION---------------*/
+nav {
+    /*border: 4px solid blue;*/
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    margin: auto;
+    padding: 0;
+    overflow: hidden;
+    background-color: #EB4402;
+    max-width: 1024px;
+    text-align: center;
+}
+nav a {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    float: left;
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+  color: #973108;
+}
+
+.active {
+  background-color: #3E1200;
+  color: white;
+}
+
+nav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  nav a:not(:first-child) {display: none;}
+  nav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav.responsive {position: relative;}
+  nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+/*---------------MAIN---------------*/
+main {
+    display: flex;
+    flex-direction: column;
+}
+        main h2 {
+            text-align: center;
+            font-size: 3rem;
+            font-family: 'Roboto Slab', serif;
+            font-weight: 300;
+            color: #973108;
+            
+}
+
+        main img {
+            max-width: 100%;
+            height: auto;            
+}
+
+        main ul {
+            margin: 0;
+            text-align: left;
+            width: 250px;
+}
+
+/*---------------FOOTER---------------*/
+
+
+footer {
+    background-color: #EB4402;
+    width: auto;
+    height: auto;
+    margin: auto;
+    padding: 20px 20px;
+
+}
+
+footer p {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    width: auto;
+    margin: 0;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    line-height: 1.7
+}
+
+
+/*---------------------FORM------------------------------------*/
+    * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+}
+
+fieldset {
+        background-color: #FFE3D7;
+        border-radius: 10px;
+        margin: 1.5em;
+        border: 1px solid #A9C1D9;
+        box-shadow: 4px 4px 10px #666;
+        font-family: 'Roboto Slab', serif;
+        font-weight: 300;
+        
+        
+    }
+legend{
+        background: #EB4402;
+        font-family: 'Roboto Slab', serif;
+        font-weight: 300;
+        color: #fff;
+        padding: 15px;
+        box-shadow: 4px 4px 10px #666;
+        width: 60%;
+        text-align: center;
+        border-radius: 7px;
+    }
+label{
+        display: flex;
+        margin: 1em;
+        flex-direction: column;
+    }
+label input{
+        flex: 1;
+        padding: 15px 20px;
+        border: 1px solid #EB4402;
+        border-radius: 5px;
+        margin-top: 10px;
+        
+    }
+textarea {
+        flex: 1;
+        padding: 15px 20px;
+        border: 1px solid red;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+label span {
+        display: block;
+        font-size: 1em;
+        color: black;
+        padding-right: 10px;
+  
+    }
+input.boton {
+        font-family: 'Roboto Slab', serif;
+        font-weight: 300;
+        color: #fff;
+        text-align: center;   
+        width: 90%;
+        background: #EB4402;
+        border-radius: 5px;
+        padding: 10px;
+        margin: auto;
+        cursor: pointer;
+        display: table;
+    
+    }
+
+/*--------------------------XXXXX--------------------------*/
+
+.container {
+  max-width: 70%;
+  margin: 20px auto 0 auto;
+  padding: 30px;
+  background-color: burlywood;
+border: 3px dashed green;
+}
+
+.form-row {
+  padding: 10px 0;
+  display: flex;
+}
+
+        .form-row label {
+          padding-right: 10px;
+        }
+
+        .form-row input {
+          flex: 1;
+        }
+
+
+
+
+
+
+
+
+
+
+/* second example -----------------------------------------------------*/
+.column-layout {
+  max-width: 1300px;
+  background-color: #FFF;
+  margin: 40px auto 0 auto;
+  line-height: 1.65;
+  padding: 20px 50px;
+ 
+border: 2px solid red;
+}
+
+.main-column {
+  
+
+border: 2px dashed blue;
+}
+
+.sidebar-one {
+  
+}
+
+.sidebar-two {
+
+}
+
+/*
+
+@media screen and (max-width: 600px){
+        .container, .gallery {
+            float: none;
+            display: block;
+            text-align: left;}
+}
+@media screen and (min-width: 600px, max-width: 1000px){
+        .container, .gallery {
+            grid-template-columns: 1fr 1fr !important;
+            float: none;
+            display: grid;
+            text-align: left;}
+}
+
+    div.gallery {
+        margin: 0px;
+        float: left;
+        max-width: 320px;
+        background-color: white;
+
+    }
+
+    div.gallery:hover {
+        border: 1px solid #777;
+    }
+
+    div.gallery img {
+        width: 100%;
+        height: auto;
+
+    }
+
+    div.desc {
+        padding: 15px;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+*/
+
+.modelos {
+    margin: 0;
+    flex-basis: 24%;
+}
+
+.modelos p {
+    color: black;
+    font-size: .9em;
+}
+
+
+@media (min-width:600px){
+    .contenedorflexy{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+main .action a{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    font-size: 1rem;
+    background-color: #EBB002;
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+    box-shadow: 4px 4px 10px #666;
+    
+}
+main .action a:hover{
+    background-color: #EB4402;
+}
+.contenedordeforma {
+    border: 1px solid green;
+    display: flex;
+}
+section h5 {
+    text-align: left;
+    font-size: 1.4em;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    color: #973108;
+    margin: 0;
+}
+section h6 {
+    text-align: left;
+    font-size: 1.2em;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    color: #973108;
+    margin: 10px 0px 0px 0px;
+}
+
+main .tourdetails {
+    padding: 40px;
+    margin-bottom: 20px;
+}
+
+section .deta {
+    color: black;
+    font-size: 1em;
+    margin-left: 15px;
+}
+
+#headtour h2 {
+    text-align: left;
+    
+}
+
+.tourimg {
+    margin-left: 20px;
+    float: right;
+}
+
+@media only screen and (max-width: 500px) {
+    .tourimg{
+        margin: auto;
+    }
+}
+
+table {
+
+        font-family: 'Roboto Slab', serif; 
+        border-collapse: collapse;
+        width: 100%;
+    
+}
+thead th {
+        background-color: #EB4402;
+        padding: 7px;
+        font-size: 1.4em;
+    
+
+}
+    
+tfoot td {
+        background-color: #FFD398;
+        padding: 7px;
+}
+tbody td {
+        background-color: #FFE3D7;
+        padding: 7px;
+}
+
+tr:nth-child(even) td {
+        background-color: #FFF5D7;
+    }
+        
+main .annual th {
+    color: black;
+    background-color: #EB4402;
+    padding: 7px;
+    font-size: 1.2em;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+}
+
+.tableroute {
+    color: black;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.anualgallery {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact {
+    font-size: 4rem;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    color: #973108;
+    text-align: center;
+    background-color: #FFE3D7;
+    width: auto;
+    height: 200px;
+    padding: 40px;
+    margin-top: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#elmapa {
+    margin-bottom: 20px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.repairtab {
+    margin: 20px 0px;
+}

@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+<!---responsive to small, medium, and larger, wide screen views----->
+  <meta charset="utf-8">
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>adventurepage</title>
+    
+  <meta name="author" content="israel-tapia">
+    
+  <meta name="description" content="page description placeholder">
+    <!-- external style references in the proper cascading order -->
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab:300,400,700" rel="stylesheet">
+    
+    <!-- OK Google API font reference -->
+    <link href="styles/normalize.css" rel="stylesheet"> <!-- normalize useragent/browser defaults -->
+    
+    <link href="styles/main.css" rel="stylesheet">    <!-- default styles - small/phone views -->
+    
+    <link href="styles/medium.css" rel="stylesheet">  <!-- medium/tablet views -->
+    
+    <link href="styles/large.css" rel="stylesheet">   <!-- large/wide/desktop views --> 
+    
+</head>
+
+    
+<body>
+<!-------------HEADER es logo y mas------------>
+
+<header>
+    <img src="imagesterm/mountain-logo300.jpg" alt="mountainspoke-logo">
+    <!--div class="subheading">Bezona Montana Biking Group</div-->
+    <h2>Bikes Parts Repair Tours</h2>
+</header>
+    
+    
+ <!-------------NAV es barra de navegación------------->
+  <!-- site navigation use placeholder references -->
+<nav id="myTopnav">
+    <a href="index.html">Home</a>
+    <a href="adventurepage.html">Adventures</a>
+    <a href="eventpage.html">Events</a>
+    <a href="salespage.html">Sales</a>
+    <a href="servicepage.html">Services</a>
+    <a href="contactpage.html">Contact Us</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</nav>
+   
+<!-------------MAIN------------->
+  <main>
+      
+<section class="aventura1">
+    
+        <div class="tourimg">
+            <img src="imagesterm/admb1.jpg" alt="mountainbike-man">
+        </div>
+    
+        <div id="headtour">
+            <h2>Hells Canyon Bike Tour</h2>
+        </div>
+    
+        <p class="tourtext">Ride parts of Oregon's Grande Tour Scenic Bikeway through the high plains and deep canyons of eastern Oregon. Explore historic inns, surprising taverns and the Oregon Trail Interpretive Center. Bicycle from open prairie vistas and serene farmland into the staggering beauty of Oregon's Eagle Cap Wilderness. Marvel at alpine lakes surrounded by the magnificent peaks of the Wallowa Range. Take a tramway to the top of Mount Howard. Ride deep into Oregon's Hells Canyon, Pine Valley and the Elkhorn and Wallowa mountains.</p>
+    
+    
+        <div class="tourdetails">
+            
+            <h5>Trip Details</h5>
+                <h6>Included Activities</h6>
+                    <p class="deta">Biking (bikes included), Oregon Trail Interpretive Center, Wallowa Lake Tram ride</p>
+                <h6>Days</h6>
+                    <p class="deta">2 days - Friday to Saturday</p>
+                <h6>Skill Level</h6>
+                    <p class="deta">All Levels</p>
+                <h6>Standard Route:</h6>
+                  <p class="deta">Average 45; Range 30 - 80</p>
+                  <p class="deta">Start/Finish
+                Boise, Idaho</p>
+                <h6>Price</h6>
+                    <p class="deta">$1,559</p>
+                    <p class="deta">Included: All breakfasts, 4 lunches, 4 dinners</p>
+            
+        </div>  
+          
+          
+</section>
+      
+      
+      
+<section class="aventura1">
+    
+        <div class="tourimg">
+            <img src="imagesterm/ADbikingwomen.jpg" alt="bicycle-image">
+        </div>
+    
+        <div id="headtour">
+            <h2>Zions National Park Tour</h2>
+        </div>
+    
+        <p>Placid St. George, Utah: gateway to Zion National Park. Red Navajo sandstone bluffs tower over the dry desert floor; massive, million-year-old peaks edge the sky. Curving walls of orange and gold slot canyons tempt the inquisitive; stunning arches and scenic bluffs beg to be photographed. Bicycle and hike among the skirts of the Pine Valley Mountains, the mesas of Snow Canyon State Park - and the meeting place of three natural wonders: the Mojave Desert and the Great Basin and Colorado Plateaus.</p>
+    
+        <div class="tourdetails">
+            <h5>Trip Details</h5>
+            <h6>Included Activities</h6>
+            <p class="deta">Biking (bikes included), hiking</p>
+            <h6>Days</h6>
+            <p class="deta">4 days - wednesday to Saturday</p>
+            <h6>Skill Level</h6>
+            <p class="deta">All Levels</p>
+            <h6>Standard Route:</h6>
+              <p class="deta">Average 35; Range 25 - 55</p>
+              <p class="deta">Start/Finish
+            St. George, Utah</p>
+            <h6>Price</h6>
+            <p class="deta">$2,789</p>
+            <p class="deta">Included: All breakfasts, 4 lunches, 4 dinners</p>
+        </div>  
+          
+          
+</section>
+      
+  
+  
+<!--------ARTICLE de MAIN------------>
+<article></article>		  
+  
+  </main><!----CIERRA MAIN---->
+
+<!---------------FOOTER---------------->
+  <footer>
+        <p>3950 Valley Commons Drive Bozeman, MT</p>
+        <p>(999)999 8888</p>
+        <p>hello@mountainspoke.com</p>
+        <p class="footer-bar">&copy;2018 All Rights Reserved by itapia | www.mountainspoke.com | <span id="currentdate">BYUI 2018</span></p>
+  </footer>
+
+
+</body>
+<!--------------Script start here------------------->
+<script> //función de la barra de navegación
+    function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "nav") {
+        x.className += " responsive";
+    } else {
+        x.className = "nav";
+    }
+}
+    
+    var d = new Date("October 13, 2014 11:13:00");
+    document.getElementById("fecha").innerHTML = d;
+    
+//remember to add an ID for "mainmenu" to the nav ul
+var urlString = document.location.href;
+var urlArray = urlString.split("/");
+var pageHREF=urlArray[urlArray.length-1];
+
+if (pageHREF !=="") {
+    var menu = document.querySelectorAll("myTopnav");
+    var i;
+    //loop through all the menu items in the navigation
+    for(i=0; i<menu.length; i++) {
+        var currentURL=(menu[i].getAttribute("href"));
+        menu[i].parentNode.className=""; //turn off hilighting by default
+        if (currentURL===pageHREF) {
+            menu[i].parentNode.className="active"; //turn on if a match
+        } //end if
+    } //end of the search for the match
+} //end of if !==
+
+
+    
+</script>
+
+
+</html>

@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+<!---responsive to small, medium, and larger, wide screen views----->
+  <meta charset="utf-8">
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>contactpage</title>
+    
+  <meta name="author" content="israel-tapia">
+    
+  <meta name="description" content="page description placeholder">
+    <!-- external style references in the proper cascading order -->
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab:300,400,700" rel="stylesheet">
+    
+    <!-- OK Google API font reference -->
+    <link href="styles/normalize.css" rel="stylesheet"> <!-- normalize useragent/browser defaults -->
+    
+    <link href="styles/main.css" rel="stylesheet">    <!-- default styles - small/phone views -->
+    
+    <link href="styles/medium.css" rel="stylesheet">  <!-- medium/tablet views -->
+    
+    <link href="styles/large.css" rel="stylesheet">   <!-- large/wide/desktop views --> 
+    
+</head>
+
+    
+<body>
+<!-------------HEADER------------>
+
+    
+    
+<header>
+    <img src="imagesterm/mountain-logo300.jpg" alt="mountainspoke-logo">
+    <h2>Bikes Parts Repair Tours</h2>
+</header>
+
+    
+<nav id="myTopnav">
+    <a href="index.html">Home</a>
+    <a href="adventurepage.html">Adventures</a>
+    <a href="eventpage.html">Events</a>
+    <a href="salespage.html">Sales</a>
+    <a href="servicepage.html">Services</a>
+    <a href="contactpage.html">Contact Us</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</nav>
+   
+<!-------------MAIN empieza con la imagen banner------------->
+<main>
+      
+    <p class="contact">Contact Us!</p>
+    
+    
+    <form action="" method ="post" enctype="multipart/form-data" name= "report" id="contactinfo">    
+    <fieldset>
+        <legend><span>Please Contact Us</span></legend>
+        <label><span>Name</span> <input name="fullname" type="text" value="" placeholder="name, lastname" pattern="[a-zA-Z-._]{3,99}" required></label>
+        <!--email using input of type email and use a placeholder to provide a demo email-->
+        <label><span>E-mail:</span> <input name="mail" type="email" value="" placeholder="contact@gmail.com" required></label>  
+        <!--phone number using input of type tel and is required-->
+
+        <label><span>Subject:</span> <input name="zipcode" type="text" value="" placeholder="64000" pattern="[0-99999]" required></label>
+        <label><span>Message:</span>
+        <textarea rows="8" cols="30"></textarea>
+        </label>
+        
+        <input type="submit" value="Sign Up" class="boton">
+        <input type="hidden" value="ContactInfo" name="subject">
+        <input name="redirect" type="hidden" value="thanks.html">
+    
+        
+    </fieldset>
+
+
+</form>
+      
+</main><!----CIERRA MAIN---->
+
+<h3>Google Maps API Code</h3>
+<div id="map"></div>
+    
+    
+    
+   <h3>Locate Us</h3>
+<div id="elmapa">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2787.9314410355237!2d-111.09290618415356!3d45.67227662755548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5345459ab72cb6df%3A0xbb98968f9648ea88!2s3950+Valley+Commons+Dr%2C+Bozeman%2C+MT+59718%2C+EE.+UU.!5e0!3m2!1ses-419!2smx!4v1523731208743" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    
+</div>
+    
+
+<!---------------FOOTER---------------->
+  <footer>
+        <p>3950 Valley Commons Drive Bozeman, MT</p>
+        <p>(999)999 8888</p>
+        <p>hello@mountainspoke.com</p>
+        <p class="footer-bar">&copy;2018 All Rights Reserved by itapia | www.mountainspoke.com | <span id="currentdate">BYUI 2018</span></p>
+  </footer>
+
+
+</body>
+    
+    
+    
+    
+<!--------------JAVASCRIPT start here------------------->
+    
+    
+    
+    
+    
+    
+<script> //función de la barra de navegación
+    
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "nav") {
+        x.className += " responsive";
+    } else {
+        x.className = "nav";
+    }
+}
+    
+    var d = new Date("October 13, 2014 11:13:00");
+    document.getElementById("fecha").innerHTML = d;
+    
+//remember to add an ID for "mainmenu" to the nav ul
+    var urlString = document.location.href;
+    var urlArray = urlString.split("/");
+    var pageHREF=urlArray[urlArray.length-1];
+
+    if (pageHREF !=="") {
+        var menu = document.querySelectorAll("myTopnav");
+        var i;
+    //loop through all the menu items in the navigation
+        for(i=0; i<menu.length; i++) {
+            var currentURL=(menu[i].getAttribute("href"));
+            menu[i].parentNode.className=""; //turn off hilighting by default
+            if (currentURL===pageHREF) {
+            menu[i].parentNode.className="active"; //turn on if a match
+        } //end if
+    } //end of the search for the match
+} //end of if !==
+
+
+
+
+//------Google Maps Script API-------------------//
+
+function initMap() {
+        var bozeman = {lat: 45.672483, lng: -111.090685};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: bozeman
+        });
+        var marker = new google.maps.Marker({
+          position: bozeman,
+          map: map
+        });
+      }
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuRL5ycGFEUtfMUkFKJ7x-HopletN-MZI&callback=initMap">
+    
+//------Google Maps Script API-------------------//
+
+    
+</script>
+
+
+</html>

@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+<!---responsive to small, medium, and larger, wide screen views----->
+  <meta charset="utf-8">
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>servicepage</title>
+    
+  <meta name="author" content="israel-tapia">
+    
+  <meta name="description" content="page description placeholder">
+    <!-- external style references in the proper cascading order -->
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab:300,400,700" rel="stylesheet">
+    
+    <!-- OK Google API font reference -->
+    <link href="styles/normalize.css" rel="stylesheet"> <!-- normalize useragent/browser defaults -->
+    
+    <link href="styles/main.css" rel="stylesheet">    <!-- default styles - small/phone views -->
+    
+    <link href="styles/medium.css" rel="stylesheet">  <!-- medium/tablet views -->
+    
+    <link href="styles/large.css" rel="stylesheet">   <!-- large/wide/desktop views --> 
+    
+</head>
+
+    
+<body>
+<!-------------HEADER ------------>
+
+<header>
+    <img src="imagesterm/mountain-logo300.jpg" alt="mountainspoke-logo">
+
+    <h2>Bikes Parts Repair Tours</h2>
+</header>
+ <!-------------NAV es barra de navegación------------->
+<nav id="myTopnav">
+    <a href="index.html">Home</a>
+    <a href="adventurepage.html">Adventures</a>
+    <a href="eventpage.html">Events</a>
+    <a href="salespage.html">Sales</a>
+    <a href="servicepage.html">Services</a>
+    <a href="contactpage.html">Contact Us</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</nav>
+   
+<!-------------MAIN empieza con la imagen banner------------->
+  <main>
+      <section></section>
+      
+      
+    <img src="imagesterm/bikepart2a.png" alt="bicycle-part">
+
+<!--------ARTICLE de MAIN------------>
+<article></article>	
+      
+ <table class="repairtab">
+    <thead>
+            <tr><!--fila 1head-->
+            <th colspan="3" style="background-color:#FFD398 ; font-size: 1.7em">Repair Service Pricing</th>
+            </tr>
+            <tr><!--fila 2head-->
+            <th style="font-size: 1em; color:white">KeyNumber</th>
+            <th style="font-size: 1em; color:white">Service</th>
+            <th style="font-size: 1em; color:white">Cost</th>
+            </tr>
+    </thead>
+        
+    <tfoot>
+        <tr><!--fila pie-->
+            <td colspan="3">Repair Service Pricing</td>
+        </tr>      
+    </tfoot>
+
+    <tbody>
+      <tr><!--fila 1-->
+        <td>1</td>
+        <td>Tune Up</td>
+        <td>$69.99, a complete once over for your bike, includes complete cleaning, lubrication and adjustment of the drive train, adjustment of front and rear brake, truing of both wheels, torque check of all components, general safety check and more.</td>
+      </tr>
+      <tr><!--fila 2-->
+        <td>2</td>
+        <td>Wheel Truing </td>
+        <td>$20-$30 per wheel</td>
+      </tr>
+      <tr><!--fila 3-->
+        <td>3</td>
+        <td>Flat Tire Fix</td>
+        <td>$10 per wheel labor, plus cost of tube ($6.99-$15) and or tire ($12-$60+)</td>
+      </tr>
+      <tr><!--fila 4-->
+        <td>4</td>
+        <td>Flat Tire Fix Rear Wheel with Training wheels or Internal Gear Bikes- </td>
+        <td>$15</td>
+      </tr>
+      <tr><!--fila 5-->
+        <td>5</td>
+        <td>Chain Replacement</td>
+        <td colspan="2">$15 labor, plus cost of chain ($15 - $50+)</td>
+      </tr>
+      <tr><!--fila 6-->
+        <td>6</td>
+        <td>Brake or Deraileur Adjustment</td>
+        <td>$15 labor for each brake or shifter front or back.</td>
+      </tr>
+    </tbody>
+</table>     
+      
+
+  </main><!----CIERRA MAIN---->
+
+<!---------------FOOTER---------------->
+  <footer>
+        <p>3950 Valley Commons Drive Bozeman, MT</p>
+        <p>(999)999 8888</p>
+        <p>hello@mountainspoke.com</p>
+        <p class="footer-bar">&copy;2018 All Rights Reserved by itapia | www.mountainspoke.com | <span id="currentdate">BYUI 2018</span></p>
+  </footer>
+
+
+</body>
+<!--------------Script start here------------------->
+<script> //función de la barra de navegación
+    function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "nav") {
+        x.className += " responsive";
+    } else {
+        x.className = "nav";
+    }
+}
+    
+    var d = new Date("October 13, 2014 11:13:00");
+    document.getElementById("fecha").innerHTML = d;
+    
+//remember to add an ID for "mainmenu" to the nav ul
+var urlString = document.location.href;
+var urlArray = urlString.split("/");
+var pageHREF=urlArray[urlArray.length-1];
+
+if (pageHREF !=="") {
+    var menu = document.querySelectorAll("myTopnav");
+    var i;
+    //loop through all the menu items in the navigation
+    for(i=0; i<menu.length; i++) {
+        var currentURL=(menu[i].getAttribute("href"));
+        menu[i].parentNode.className=""; //turn off hilighting by default
+        if (currentURL===pageHREF) {
+            menu[i].parentNode.className="active"; //turn on if a match
+        } //end if
+    } //end of the search for the match
+} //end of if !==
+
+
+    
+</script>
+
+
+</html>
