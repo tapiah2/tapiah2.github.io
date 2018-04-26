@@ -5,14 +5,15 @@
 * { margin: 0; box-sizing: border-box; } 
 
 body { 
-    font-size: 16px; 
+    font-size: 13px; 
     line-height: 32px;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Playfair Display', serif;
     color: black;
 }
 
 h1 {
     font-size: 2.5em;
+    font-weight: 400;
     color: darkblue;
 }
 
@@ -20,6 +21,7 @@ h2 {
     font-size: 2em;
     text-align: center;
     border-bottom: 1px solid #bbb;
+    font-weight: 400;
 }
 
 header, main, footer {
