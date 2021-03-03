@@ -135,3 +135,30 @@ img {
     
 /* end of media query */ 
 }
+
+.banner-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+}
+.banner-box img {
+  grid-column: 1/-1;/* the -1 is just a way to say "span all the columns" */
+  grid-row:1;
+}
+.action {
+  grid-column: 1;
+  grid-row: 1;
+  background-color: rgba (240, 240, 240, 0.8);
+  margin: 1em 3em;
+  padding: 1em;
+  text-align: center;
+}
+.action button {
+  line-height: 2em;
+  width: 10em;
+  background-color: #B80C09;
+  font-size: 1em;
+  color: #ffffff;
+  font-family: poppins, arial, sans-serif;
+}
+
