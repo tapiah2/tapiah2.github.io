@@ -1,0 +1,57 @@
+/* Notas del diseño
+
+inkwell #363945 
+Body es todo el espacio
+Contenido es el main, o la caja tipográfica
+
+selectores:
+All CSS Simple Selectors
+Selector	              Example	                  Example description
+#id	                    #firstname	              Selects the element with id="firstname"
+.class	                .intro	                  Selects all elements with class="intro"
+element.class	          p.intro	                  Selects only <p> elements with class="intro"
+*	                      *	                        Selects all elements
+element	                p	                        Selects all <p> elements
+element,element,..	    div, p	                  Selects all <div> elements and all <p> elements
+
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+  background-color: #363945;
+  font-family: "Roboto", sans-serif;
+  padding: 5px 25px;
+  font-size: 18px;
+  margin: 0;
+  color: #444;
+}
+
+h1 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 32px;
+  background-color: #0072B5;
+  color: #ffffff;
+  padding: 20px;
+  
+}
+h2{
+  color: #ffffff;
+  font-family: Nunito, sans-serif;
+  font-size: 1.5em;
+  padding: 20px;
+  background-color: #D2386C;
+ 
+}
+h3{
+  color: #ffffff;
+  font-family: Nunito, sans-serif;
+  font-size: 1em;
+  background-color: #00A170;
+  padding: 20px;
+}
+#contenido{
+  background-color: #F5DF4D;
+}
