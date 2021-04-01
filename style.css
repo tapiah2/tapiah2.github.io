@@ -1,0 +1,137 @@
+/* Notas del diseño
+
+inkwell #363945 
+Body es todo el espacio
+Contenido es el main, o la caja tipográfica
+
+selectores:
+All CSS Simple Selectors
+Selector                Example                   Example description
+#id                     #firstname                Selects the element with id="firstname"
+.class                  .intro                    Selects all elements with class="intro"
+element.class           p.intro                   Selects only <p> elements with class="intro"
+*                       *                         Selects all elements
+element                 p                         Selects all <p> elements
+element,element,..      div, p                    Selects all <div> elements and all <p> elements
+
+/* CSS HEX
+--jet-grisoscuro: #353535ff;
+--ming-verde: #3c6e71ff;
+--white: #ffffffff;
+--gainsboro-grisclaro: #d9d9d9ff;
+--indigo-dye-azulado: #284b63ff;
+ #f5f5f5 gris mas clarito
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #fffffff;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 3em;
+  color: #3c6e71ff;
+ 
+}
+h2{
+  font-family: "Roboto", sans-serif;
+  font-size: 2em;
+  color: #284b63ff;
+  
+}
+h3{
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  color: #284b63ff; 
+}
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2em;
+  color: #353535ff;
+}
+nav{
+  background-color: #353535ff;
+  padding: 10px;
+  
+}
+nav a {
+  display: inline;
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  color: #ffffffff;
+  
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+}
+li {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4em;
+  color: #284b63ff;
+  display: inline; /*este alinea las listas en lugar del bloque en todos los links o anchors*/
+  margin: 10px;
+}
+/*esto es el estilo de los anchor o links*/
+a:link {
+  text-decoration: none;
+  color: #284b63ff;
+}
+a:visited {
+  text-decoration: none;
+  color: #284b63ff;
+}
+a:hover {
+  text-decoration: underline;
+  color: #ff6d00;
+}
+a:active {
+  text-decoration: underline;
+}
+.estiloseccion1{
+  background-color: #d9d9d9ff;;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
+  padding: 4rem 5vw 3rem;
+}
+  /*-----------
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-gap: 3rem;
+  li {   ------hay que revisar este estilo sacado de jen, necesito pasar a la columna 3 y 3 y 4 y etc.
+  a cada elemento de la lista. 
+  > a {
+    display: flex;
+    flex-direction: column;
+    img {
+      order: -1;
+    }
+    }
+  }
+}
+  
+  item1 {
+    grid-column:1;
+  }
+  item2 {
+    grid-column:2;
+  }
+  item3 {
+    grid-column:3;
+  }
+  ----------- */
+  
+.estiloseccion2{
+  background-color: #f5f5f5;
+  padding: 0px;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
+  padding: 4rem 5vw 3rem;
+}
