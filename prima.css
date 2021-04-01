@@ -21,7 +21,7 @@ element,element,..	    div, p	                  Selects all <div> elements and a
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 body {
-  background-color: #363945;
+  background-color: #EDF1FF;
   font-family: "Roboto", sans-serif;
   padding: 5px 25px;
   font-size: 18px;
@@ -54,4 +54,8 @@ h3{
 }
 #contenido{
   background-color: #F5DF4D;
+}
+
+#listademo{
+  
 }
