@@ -26,60 +26,79 @@ element,element,..      div, p                    Selects all <div> elements and
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@800&display=swap');
 
+
+
+.encabezado{
+  padding: 3rem 4rem 20rem 4rem;
+  margin: auto;
+  text-align: center;
+}
+.regleta{
+  height: 40px;
+  background: #284b63ff;
+}
 * {
   box-sizing: border-box;
 }
 body {
   background-color: #fffffff;
 }
-
 h1 {
-  font-family: "Roboto", sans-serif;
-  font-size: 3em;
-  color: #3c6e71ff;
- 
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 2.3em;
+  color: #284b63ff;
+  font-weight: 800;
 }
 h2{
-  font-family: "Roboto", sans-serif;
+  font-family: 'Alegreya Sans', sans-serif;
   font-size: 2em;
   color: #284b63ff;
-  
+  font-weight: 500;
 }
 h3{
-  font-family: "Roboto", sans-serif;
+  font-family: 'Alegreya Sans', sans-serif;
   font-size: 1em;
-  color: #284b63ff; 
+  color: #284b63ff;
+  font-weight: 400; 
 }
 p {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Alegreya Sans', sans-serif;
   font-size: 1.2em;
   color: #353535ff;
 }
-nav{
+nav .menu {
   background-color: #353535ff;
-  padding: 10px;
-  
+  padding: 20px;
+  list-style: none;
 }
 nav a {
-  display: inline;
   font-family: "Roboto", sans-serif;
   font-size: 1em;
   color: #ffffffff;
-  
 }
-
 ul {
     list-style: none;
     padding: 0;
     margin: 1rem 0 0;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 1rem;
 }
 li {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Alegreya Sans', sans-serif;
   font-size: 1.4em;
+  font-style: italic;
   color: #284b63ff;
-  display: inline; /*este alinea las listas en lugar del bloque en todos los links o anchors*/
+  display: inline;
   margin: 10px;
+  padding: 1em;
+  background: red;
 }
 /*esto es el estilo de los anchor o links*/
 a:link {
@@ -92,7 +111,7 @@ a:visited {
 }
 a:hover {
   text-decoration: underline;
-  color: #ff6d00;
+  color: #ffffffff;
 }
 a:active {
   text-decoration: underline;
@@ -101,37 +120,36 @@ a:active {
   background-color: #d9d9d9ff;;
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
   padding: 4rem 5vw 3rem;
-}
-  /*-----------
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  grid-gap: 3rem;
-  li {   ------hay que revisar este estilo sacado de jen, necesito pasar a la columna 3 y 3 y 4 y etc.
-  a cada elemento de la lista. 
-  > a {
-    display: flex;
-    flex-direction: column;
-    img {
-      order: -1;
-    }
-    }
-  }
-}
-  
-  item1 {
-    grid-column:1;
-  }
-  item2 {
-    grid-column:2;
-  }
-  item3 {
-    grid-column:3;
-  }
-  ----------- */
-  
+} 
 .estiloseccion2{
   background-color: #f5f5f5;
-  padding: 0px;
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
   padding: 4rem 5vw 3rem;
+}
+.contenedor2{
+  background-color: #f5f5f5;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
+  padding: 4rem 5vw 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-gap: 3rem;  
+}
+/* ejercicio1 4col fiusha----------------------------------------*/
+.listademo {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+}
+.lista1 {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 1.4em;
+  font-style: italic;
+  color: #284b63ff;
+  display: inline;
+  margin: 10px;
+  padding: 1em;
+  background: #f72585;
 }
